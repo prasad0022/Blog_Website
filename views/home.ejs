@@ -1,19 +1,68 @@
 <%- include("partials/header") -%>
 
-    <h1>Home</h1>
+    <h1>Welcome to BloGer!</h1>
 
     <p>
-        <%= homeContent %>
+        Explore the world of BloGer, where we bring you a collection of insightful articles, thought-provoking stories,
+        and engaging content. Our blog covers a wide range of topics, including science, sports, nature, etc. Whether
+        you're a passionate enthusiast or a curious reader, you'll find something captivating here.
+    </p>
+
+    <h2>Why choose BloGer?</h2>
+
+    <ol>
+        <li>
+            Expert Perspectives: Our team of experienced writers and contributors share their knowledge and expertise on
+            various subjects. Get unique insights and deep dives into the topics that matter most to you.
+        </li>
+        <li>
+            Diverse Content: From informative articles and how-to guides to personal stories and interviews, we offer a
+            diverse range of content that caters to different interests and preferences.
+        </li>
+        <li>
+            Engaging Community: Join our community of like-minded individuals who enjoy thought-provoking discussions
+            and exchanging ideas. Share your thoughts, comments, and experiences to foster a vibrant and interactive
+            community.
+        </li>
+        <li>
+            Regular Updates: We strive to keep our blog fresh and up-to-date with new content published
+            [weekly/monthly/regularly]. Stay tuned for our latest articles and stay connected with the ever-evolving
+            world around us.
+        </li>
+    </ol>
+
+    <h2>Explore our Blog Categories:</h2>
+
+    <ul>
+        <li>
+            [Category 1]: Discover in-depth articles about [category 1 topic].
+        </li>
+        <li>
+            [Category 2]: Dive into the fascinating world of [category 2 topic].
+        </li>
+        <li>
+            [Category 3]: Explore the latest trends and insights on [category 3 topic].
+        </li>
+    </ul>
+
+    <p>
+        Start Exploring Today! Get started by browsing through our latest articles or diving into the categories that
+        interest you the most. We hope you find our blog inspiring, educational, and entertaining. Don't forget to
+        subscribe to our newsletter to receive updates directly in your inbox.
+    </p>
+
+    <p>
+        Join us on this exciting journey of knowledge and discovery. Happy reading!
     </p>
 
     <% posts.forEach((post)=>{ %>
         <h1>
-            <%= post.postTitle %>
+            <%= post.title %>
         </h1>
         <p>
-            <%= post.postContent.substring(0, 100)+"...." %>
-                <a href="/posts/<%= post.postTitle %>">Read more</a>
+            <%= post.content.substring(0, 100)+"...." %>
+                <a href="/posts/<%= post.title %>">Read more</a>
         </p>
         <% }); %>
 
-<%- include("partials/footer") -%>
+            <%- include("partials/footer") -%>
