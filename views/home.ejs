@@ -31,20 +31,6 @@
         </li>
     </ol>
 
-    <h2>Explore our Blog Categories:</h2>
-
-    <ul>
-        <li>
-            [Category 1]: Discover in-depth articles about [category 1 topic].
-        </li>
-        <li>
-            [Category 2]: Dive into the fascinating world of [category 2 topic].
-        </li>
-        <li>
-            [Category 3]: Explore the latest trends and insights on [category 3 topic].
-        </li>
-    </ul>
-
     <p>
         Start Exploring Today! Get started by browsing through our latest articles or diving into the categories that
         interest you the most. We hope you find our blog inspiring, educational, and entertaining. Don't forget to
@@ -55,14 +41,17 @@
         Join us on this exciting journey of knowledge and discovery. Happy reading!
     </p>
 
-    <% posts.forEach((post)=>{ %>
-        <h1>
-            <%= post.title %>
-        </h1>
-        <p>
-            <%= post.content.substring(0, 100)+"...." %>
-                <a href="/posts/<%= post.title %>">Read more</a>
-        </p>
-        <% }); %>
+    <div>
+        <% posts.forEach((post)=>{ %>
+            <h1>
+                <%= post.title %>
+            </h1>
+            <p>
+                <%= post.content.substring(0, 100)+"...." %>
+                    <a href="/posts/<%= post.title %>">Read more</a>
+            </p>
+            <% }); %>
+    </div>
 
-            <%- include("partials/footer") -%>
+
+<%- include("partials/footer") -%>
